@@ -11,65 +11,39 @@
 </body>
 
 <script type="text/javascript">
-    function MaiorEMenor(){
-        var menor;
-        var maior;
-        var clazz = {
-            encontra: function(nums){
-                menor = Number.MAX_VALUE;
-                maior = Number.MIN_VALUE;
-                nums.forEach(function(num) {
-                    if(num < menor) 
-                        menor = num;
-                     if(num>maior) 
-                        maior = num;
-                });                
-            },
-            pegaMaior: 
-            function() {
-                return maior;
-            },
-            pegaMenor: 
-            function() {
-             return menor;
-            }
-        };
-        return clazz;
-    }
-    var algoritmo = new MaiorEMenor();
-    console.log("Teste 01 - Dec")
-    algoritmo.encontra([7,6,5,4]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 02 - Cres")
 
-    algoritmo.encontra([4,5,6,7]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 03 - Misturado")
-    algoritmo.encontra([6,5,7,4]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 04 - Vazio")
-    algoritmo.encontra([6,5,"",4]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 05 - -0")
-    algoritmo.encontra([6,5,-2,4,-0]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 06 - a")
-    algoritmo.encontra([6,5,"a",4,-0]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 07 - {}")
-    algoritmo.encontra([6,5,{},4,-0]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
-    console.log("Teste 08 - vetor vazio")
-    algoritmo.encontra([]);
-    console.log(algoritmo.pegaMaior());
-    console.log(algoritmo.pegaMenor());
+function autobuy(amount) {
+  if (typeof amount !== "number") {
+    return 0;
+  }
+  if (amount < 0) {
+    amount = 0;
+  } else if (amount < 1000) {
+    console.log("Faz eco pow");
+  } else if (amount < 2000) {
+    amount -= 800;
+    console.log("Pistola comprada");
+  } else if (amount < 2500) {
+    amount -= 1800;
+    console.log("Pistola + Colete comprado");
+  } else if (amount < 3500) {
+    amount -= 2500;
+    console.log("Sub + Colete comprado");
+  } else if (amount < 4500) {
+    amount -= 4100;
+    console.log("Rifle + Colete comprado");
+  } else {
+    amount -= 4500;
+    console.log("AWP + Colete comprado")
+  }
+  return amount;
 
+}
+
+console.log("Teste 1", autobuy(5100) === 100);
+
+autobuy("x");
+
+   
 </script>
 </html>

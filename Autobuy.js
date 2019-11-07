@@ -1,4 +1,7 @@
 function autobuy(amount) {
+  if (typeof amount !== "number") {
+    return 0;
+  }
   if (amount < 0) {
     amount = 0;
   } else if (amount < 1000) {
@@ -22,3 +25,9 @@ function autobuy(amount) {
   return amount;
 
 }
+
+var a = new autobuy();
+console.log(a.autobuy("a")=="Esperava aparacer faz um eco")
+console.log(a.autobuy(50)==50)
+console.log(a.autobuy(1250)==450)
+console.log(a.autobuy(2100)==300)
