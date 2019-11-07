@@ -1,5 +1,7 @@
 function autobuy(amount) {
-  if (amount < 1000) {
+  if (amount < 0) {
+    amount = 0;
+  } else if (amount < 1000) {
     console.log("Faz eco pow");
   } else if (amount < 2000) {
     amount -= 800;
@@ -20,6 +22,3 @@ function autobuy(amount) {
   return amount;
 
 }
-
-
-window.alert(autobuy(0));
