@@ -26,8 +26,7 @@ function autobuy(amount) {
 
 }
 
-var a = new autobuy();
-console.log(a.autobuy("a")=="Esperava aparacer faz um eco")
-console.log(a.autobuy(50)==50)
-console.log(a.autobuy(1250)==450)
-console.log(a.autobuy(2100)==300)
+console.log(autobuy("a")==0)
+console.log(autobuy(50)==50)
+console.log(autobuy(1250)==450)
+console.log(autobuy(2100)==300)
